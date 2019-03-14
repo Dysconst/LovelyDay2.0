@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{EFCD11A8-8393-4101-A53D-B429921C0D36}</ProjectGuid>
+    <ProjectGuid>{F126891A-4D08-431E-9841-CDB448CA797F}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>LovelyDay2._0</RootNamespace>
-    <AssemblyName>LovelyDay2.0</AssemblyName>
+    <RootNamespace>LovelyDay</RootNamespace>
+    <AssemblyName>LovelyDay</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

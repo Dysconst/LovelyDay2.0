@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LovelyDay2_0
+namespace LovelyDay
 {
     class Program
     {
