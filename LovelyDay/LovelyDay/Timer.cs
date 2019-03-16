@@ -8,7 +8,37 @@ using System.Diagnostics;
 
 namespace LovelyDay
 {
+    
     class Timer
     {
+        private static float myDeltaTime;
+        private static float myTotalTime;
+        private static Stopwatch myStopWatch;
+
+        static Timer()
+        {
+            myStopWatch = new Stopwatch();
+            myDeltaTime = 0;
+            myTotalTime = 0;
+        }
+
+        public static void Update()
+        {
+            myStopWatch.Stop();
+            myDeltaTime = ((float)myStopWatch.ElapsedTicks / (float)(TimeSpan.TicksPerMillisecond / 1000f)) / 1000000f;
+            myTotalTime += myDeltaTime;
+            myStopWatch.Reset();
+            myStopWatch.Start();
+        }
+
+        public static float GetDeltaTime()
+        {
+            return myDeltaTime;
+        }
+
+        public static float GetTotalTime()
+        {
+            return myTotalTime;
+        }
     }
 }
