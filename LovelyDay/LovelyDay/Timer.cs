@@ -8,8 +8,7 @@ using System.Diagnostics;
 
 namespace LovelyDay
 {
-    
-    class Timer
+    static class Timer
     {
         private static float myDeltaTime;
         private static float myTotalTime;
@@ -25,7 +24,7 @@ namespace LovelyDay
         public static void Update()
         {
             myStopWatch.Stop();
-            myDeltaTime = ((float)myStopWatch.ElapsedTicks / (float)(TimeSpan.TicksPerMillisecond / 1000f)) / 1000000f;
+            myDeltaTime = ((float)myStopWatch.ElapsedTicks / (float)(TimeSpan.TicksPerMillisecond / 1000f)) / 1000000f; // Delta time down to nano seconds
             myTotalTime += myDeltaTime;
             myStopWatch.Reset();
             myStopWatch.Start();

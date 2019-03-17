@@ -1,13 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace LovelyDay
 {
-    interface IEntity
+    interface IShell
     {
-        void Update(float aDeltaTime);
+        void RunCommand(string aCommand);
     }
 }
