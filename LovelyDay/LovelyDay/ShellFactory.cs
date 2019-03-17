@@ -15,18 +15,22 @@ namespace LovelyDay
 
             switch (aShellType)
             {
+                case ShellType.LovelyDay:
+                {
+                    return new Shell_LovelyDay();
+                }
                 case ShellType.CMD:
-                    {
-                        return new Shell_CMD();
-                    }
+                {
+                    return new Shell_CMD();
+                }
                 case ShellType.PowerShell:
-                    {
-                        return new Shell_Powershell();
-                    }
+                {
+                    return new Shell_Powershell();
+                }
                 default:
-                    {
-                        return new Shell_CMD();
-                    }
+                {
+                    return new Shell_LovelyDay();
+                }
             }
         }
     }
@@ -35,9 +39,9 @@ namespace LovelyDay
     {
         public Shell_LovelyDay()
         {
-
+            throw new NotImplementedException();
         }
-
+        
         public void RunCommand(string aCommand)
         {
             throw new NotImplementedException();
