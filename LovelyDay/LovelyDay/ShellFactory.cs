@@ -19,7 +19,7 @@ namespace LovelyDay
                 {
                     return new Shell_LovelyDay();
                 }
-                case ShellType.CMD:
+                case ShellType.Cmd:
                 {
                     return new Shell_CMD();
                 }
