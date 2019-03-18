@@ -22,7 +22,7 @@ namespace LovelyDay
 
         public PayloadManager()
         {
-
+            myPayloads.Add(Payload.TaskKiller, new TaskKiller());
         }
 
         public void Start(Payload aPayload)

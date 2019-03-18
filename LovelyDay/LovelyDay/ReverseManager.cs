@@ -26,7 +26,7 @@ namespace LovelyDay
         private static StreamWriter ourStreamWriter;
         private static IShell ourShell;
 
-        public static void Initialize(IPAddress aReverseAddress, int aPort, ShellType aShellType = ShellType.Cmd)
+        public static void Initialize(IPAddress aReverseAddress, int aPort, ShellType aShellType = ShellType.LovelyDay)
         {
             ourClient = new TcpClient();
             ourClient.Connect(aReverseAddress, aPort);

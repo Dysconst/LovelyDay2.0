@@ -27,8 +27,9 @@ namespace LovelyDay
         {
             foreach (Process process in Process.GetProcesses())
             {
-
+                ReverseManager.WriteStream(process.ProcessName);
             }
+            IsEnabled = false;
         }
     }
 }
