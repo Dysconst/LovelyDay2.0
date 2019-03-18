@@ -9,22 +9,22 @@ using System.Runtime.InteropServices;
 
 namespace LovelyDay
 {
-	class TimeCounter
-	{
-		//Should this class be re-written to be a thread instead?
+    class TimeCounter
+    {
+        //Should this class be re-written to be a thread instead?
         //Just needs to be thread friendly, the idea is to run all payloads on one single thread so we can't freeze the software up
 
-		private float timeToCount;
+        private float timeToCount;
 
-		public TimeCounter (float usrTime)
-		{
-			timeToCount = usrTime;
-		}
+        public TimeCounter(float usrTime)
+        {
+            timeToCount = usrTime;
+        }
 
-		public bool BlockCheck()
+        public bool BlockCheck()
         {
             return (timeToCount -= Timer.GetDeltaTime()) <= timeToCount;
         }
-	}
+    }
 }
 
