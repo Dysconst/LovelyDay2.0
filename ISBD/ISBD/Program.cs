@@ -8,7 +8,7 @@ using System.Threading;
 using System.Runtime.InteropServices;
 using System.Net;
 
-namespace LovelyDay
+namespace ISBD
 {
     class Program
     {

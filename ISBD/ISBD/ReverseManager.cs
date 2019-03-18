@@ -8,7 +8,7 @@ using System.Net.Sockets;
 using System.IO;
 using System.Diagnostics;
 
-namespace LovelyDay
+namespace ISBD
 {
     public enum ShellType
     {

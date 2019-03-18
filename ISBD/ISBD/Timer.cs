@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Timers;
 using System.Diagnostics;
 
-namespace LovelyDay
+namespace ISBD
 {
     static class Timer
     {

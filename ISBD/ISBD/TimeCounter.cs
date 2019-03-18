@@ -7,7 +7,7 @@ using System.Diagnostics;
 using System.Threading;
 using System.Runtime.InteropServices;
 
-namespace LovelyDay
+namespace ISBD
 {
     class TimeCounter
     {

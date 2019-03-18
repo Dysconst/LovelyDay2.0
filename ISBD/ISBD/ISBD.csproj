@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{F126891A-4D08-431E-9841-CDB448CA797F}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>LovelyDay</RootNamespace>
-    <AssemblyName>LovelyDay</AssemblyName>
+    <RootNamespace>ISBD</RootNamespace>
+    <AssemblyName>ISBD</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
