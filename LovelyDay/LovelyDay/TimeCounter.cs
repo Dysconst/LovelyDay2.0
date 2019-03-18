@@ -23,7 +23,7 @@ namespace LovelyDay
 
         public bool BlockCheck()
         {
-            return (timeToCount -= Timer.GetDeltaTime()) <= timeToCount;
+            return (timeToCount -= Timer.GetDeltaTime()) <= 0;
         }
     }
 }
