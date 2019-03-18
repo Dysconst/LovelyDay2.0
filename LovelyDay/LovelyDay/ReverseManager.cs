@@ -37,9 +37,9 @@ namespace LovelyDay
             ourShell = ShellFactory.Create(aShellType);
         }
 
-        public static void RunCommand(string aCommand)
+        public static void WriteStream(string someData)
         {
-            ourShell.RunCommand(aCommand);
+            ourShell.WriteStream(someData);
         }
 
         public static string WaitForCommand()

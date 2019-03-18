@@ -37,12 +37,14 @@ namespace LovelyDay
     
     class Shell_LovelyDay : IShell
     {
+        public ShellType myType => throw new NotImplementedException();
+
         public Shell_LovelyDay()
         {
             throw new NotImplementedException();
         }
-        
-        public void RunCommand(string aCommand)
+
+        public void WriteStream(string someData)
         {
             throw new NotImplementedException();
         }
@@ -52,6 +54,7 @@ namespace LovelyDay
     {
         private Process myProcess;
         private ProcessStartInfo myStartInfo;
+        public ShellType myType => throw new NotImplementedException();
 
         public Shell_CMD()
         {
@@ -69,7 +72,7 @@ namespace LovelyDay
             myProcess.BeginOutputReadLine();
         }
 
-        public void RunCommand(string aCommand)
+        public void WriteStream(string aCommand)
         {
             myProcess.StandardInput.WriteLine(aCommand);
         }
@@ -79,6 +82,7 @@ namespace LovelyDay
     {
         private Process myProcess;
         private ProcessStartInfo myStartInfo;
+        public ShellType myType => throw new NotImplementedException();
 
         public Shell_Powershell()
         {
@@ -96,7 +100,7 @@ namespace LovelyDay
             myProcess.BeginOutputReadLine();
         }
 
-        public void RunCommand(string aCommand)
+        public void WriteStream(string aCommand)
         {
             myProcess.StandardInput.WriteLine(aCommand);
         }

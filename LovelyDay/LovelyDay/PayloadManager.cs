@@ -11,7 +11,7 @@ namespace LovelyDay
     public enum Payload
     {
         MouseMove,
-        TaskKill,
+        TaskKiller,
         KeyboardHijack
     }
 

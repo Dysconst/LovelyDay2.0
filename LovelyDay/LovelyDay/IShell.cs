@@ -10,6 +10,7 @@ namespace LovelyDay
 {
     interface IShell
     {
-        void RunCommand(string aCommand);
+        ShellType myType { get; }
+        void WriteStream(string someData);
     }
 }

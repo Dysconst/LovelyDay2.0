@@ -42,7 +42,7 @@ namespace LovelyDay
 
         private static void Update()
         {
-            ReverseManager.RunCommand(aCommand);
+            ReverseManager.WriteStream(aCommand);
             aCommand = ReverseManager.WaitForCommand(); 
         }
 
