@@ -18,7 +18,6 @@ namespace ISBD
     class PayloadManager
     {
         private Dictionary<Payload, IPayload> myPayloads = new Dictionary<Payload, IPayload>();
-        private Mutex myLock = new Mutex();
 
         public PayloadManager()
         {
@@ -27,16 +26,12 @@ namespace ISBD
 
         public void Start(Payload aPayload)
         {
-            myLock.WaitOne();
             myPayloads[aPayload].Start();
-            myLock.ReleaseMutex();
         }
 
         public void Stop(Payload aPayLoad)
         {
-            myLock.WaitOne();
             myPayloads[aPayLoad].Stop();
-            myLock.ReleaseMutex();
         }
 
         public void Update(float aDeltaTime)

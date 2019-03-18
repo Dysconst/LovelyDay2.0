@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace ISBD
@@ -11,6 +12,7 @@ namespace ISBD
     {
         public string Name { get; }
 
+        bool myEnabledFlag;
         public bool IsEnabled { get; set; }
 
         public void Start()
