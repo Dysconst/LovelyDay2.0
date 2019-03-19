@@ -24,7 +24,7 @@ namespace ISBD
         public static void Update()
         {
             myStopWatch.Stop();
-            myDeltaTime = ((float)myStopWatch.ElapsedTicks / (float)(TimeSpan.TicksPerMillisecond / 1000f)) / 1000000f; // Delta time down to nano seconds
+            myDeltaTime = (float)myStopWatch.ElapsedTicks / (float)(TimeSpan.TicksPerMillisecond / 1000f) / 1000000f;
             myTotalTime += myDeltaTime;
             myStopWatch.Reset();
             myStopWatch.Start();

